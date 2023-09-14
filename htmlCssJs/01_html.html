@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML 수업 코드</title>
+    </head>
+    <body>
+        <h1>SeSAC 용산</h1>
+        <!-- 블록요소. 제목을 정의하고 싶을때 사용 -->
+        <h2>SeSAC 용산</h2>
+        <h3>SeSAC 용산</h3>
+        <h4>SeSAC 용산</h4>
+        <h5>SeSAC 용산</h5>
+        <h6>SeSAC 용산</h6>
+
+        <hr />
+
+        <div>SeSAC 용산</div>
+        <div>SeSAC 용산</div>
+        <p>SeSAC 용산</p>
+        <p>SeSAC 용산</p>
+
+        <hr />
+
+        <div>
+            안녕하세요안녕하세요안녕하세요
+            <br />안녕하세요안녕하세요안녕하세요
+            <br />안녕하세요안녕하세요안녕하세요
+        </div>
+        
+        <hr />
+
+        <!-- Semantic 의미에서 커스터마이징이 심하더라도 ul,ol태그 사용 -->
+        <ul type="square">
+            <li>사과</li>
+            <li>바나나</li>
+            <li>포도</li>
+        </ul>
+        <ol type="I" start="3" reversed>
+            <li>사과</li>
+            <li>바나나</li>
+            <li>포도</li>
+        </ol>
+
+        <hr />
+ 
+        <b>hello</b>
+        <strong>hello</strong>
+        <i>hello</i>
+        <em>hello</em>
+        <del>hello</del>
+        <u>hello</u>
+
+        <hr />
+
+        <p><a href="https://www.google.com/webhp?hl=ko&sa=X&ved=0ahUKEwihz_vgu6mBAxVBsFYBHZ8GAHkQPAgJ"><img src="./googlelogo_color_272x92dp.png" title="스타벅스" alt=""></a> </p>
+        <h1 style="color: blue;">스타벅스</h1>
+        <ul>
+            <li>
+                <h2>아메리카노</h2>
+                <ol>
+                    <li>R : 3000won</li>
+                    <li>L : 3500won</li>
+                </ol>
+            </li>
+            <li>
+                <h2>카페라떼</h2>
+                <ol>
+                    <li>R : 3000won</li>
+                    <li>L : 3500won</li>
+                </ol>
+            </li>
+            <li>
+                <h2>딸기주스</h2>
+                <ol>
+                    <li>R : 3000won</li>
+                    <li>L : 3500won</li>
+                </ol>
+            </li>
+            <li>
+                <h2>레모네이드</h2>
+                <ol>
+                    <li>R : 3000won</li>
+                    <li>L : 3500won</li>
+                </ol>
+            </li>
+        </ul>
+        <hr />
+        <h2>음료설명</h2>
+        <p>
+            <span>아메리카노는 <b>물</b>에 에스프레소 샷을 탄 음료입니다.</span>
+        </p>
+        <p>
+            <span>카페라떼는 <b>우유</b>에 에스프레소 샷을 탄 음료입니다.</span>
+        </p>
+        <p>
+            <span>유기농 딸기를 넣고 만든 <strong>생과일 주스</strong> 입니다.</span>
+        </p>
+        <p>
+            <span>레몬 착즙 주스와 <strong>탄산수</strong>를 이용해 만든 <i>톡 쏘는 탄산음료</i>입니다.</span>
+        </p>
+        
+        
+        <hr />
+
+        <h3>설문조사</h3>
+        <form action="">
+
+            이름 : <input type="text" name="name" placeholder="이름을 입력하세요."/>
+            <br />
+            이메일 : <input type="text" name="email" placeholder="email@example.com" />
+
+        </form>
+        <br />
+        <h4>나이</h4>
+        <form action="">
+            <input type="radio" name="older" value="10">10대
+            <input type="radio" name="older" value="20">20대
+            <input type="radio" name="older" value="30">30대
+            <input type="radio" name="older" value="40">40대
+            <input type="radio" name="older" value="50">50대
+            <input type="radio" name="older" value="60~">60대 이상
+        </form>
+        <br />
+        <h4>원하는 강의(복수응답가능합니다.)</h4>
+        <form action="">
+            <input type="checkbox" name="checkbox" value="html">html
+            <input type="checkbox" name="checkbox" value="javascript">javascript
+            <input type="checkbox" name="checkbox" value="css">css
+            <br/>
+            <p><textarea name="text"  cols="100%" rows="10" placeholder="하고 싶은말을 써주세요 :)"></textarea></p>
+            <button>제출</button>
+        </form>
+
+        <br />
+        <hr />
+        <br />
+
+        <table cellpadding="16px">
+            <thead>
+                <tr>
+                    <th colspan="7"><h2 style="color: green;">2019년 6월</h2></th>
+                </tr>
+                <tr>
+                    <th style="color: red;">일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th style="color: blue;">토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="color: blue;">1</td>
+                </tr>
+                <tr align="center">
+                    <td style="color: red;">2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td style="color: red;">6</td>
+                    <td>7</td>
+                    <td style="color: blue;">8</td>
+                </tr>
+                <tr align="center">
+                    <td style="color: red;">9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td style="color: blue;">15</td>
+                </tr>
+                <tr align="center">
+                    <td style="color: red;">16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td style="color: blue;">22</td>
+                </tr>
+                <tr align="center">
+                    <td style="color: red;">23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td style="color: blue;">29</td>
+                </tr>
+                <tr align="center">
+                    <td style="color: red;">30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br />
+        <hr />
+        <br />
+
+        <table border="1px" cellspacing="0" cellpadding="16px" width="50%">
+            <thead>
+                <tr>
+                    <th colspan="6" style="color: blue;"><h2>시간표</h2></th>
+                </tr>
+                <tr style="color: red;">
+                    <th></th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="60" style="color: green;"><img src="" alt=""><h4>1교시</h4></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                </tr>
+                <tr>
+                    <td width="60" style="color: green;"><img src="" alt=""><h4>2교시</h4></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                </tr>
+                <tr>
+                    <td width="60" style="color: green;"><img src="" alt=""><h4>3교시</h4></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                </tr>
+                <tr>
+                    <td width="60" style="color: green;"><img src="" alt=""><h4>4교시</h4></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><a href="https://www.youtube.com/MarvelKorea" target="_blank"><img src="./tableimg/logo.svg" alt="마블로고" width="100%"></a></td>
+                </tr>
+                <tr>
+                    <td width="60" style="color: green;"><img src="" alt=""><h4>5교시</h4></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                </tr>
+                <tr>
+                    <td width="60" style="color: green;"><img src="" alt=""><h4>6교시</h4></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                    <td><img src="./tableimg/1.jpg" alt="마블" width="100%" height="100%"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br />
+        <hr />
+        <br />
+
+        <table border="1" cellspacing="0" width="50%">
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>음료</th>
+                    <th>가격</th>
+                    <th>이미지</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2" width="10%">커피류</td>
+                    <td>아메리카노</td>
+                    <td>4200원</td>
+                    <td><a href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004786"><img src="./starbuckimg/1.jpg" alt="아메리카노" width="200"></a></td>
+                </tr>
+                <tr>
+                    <td>돌체라떼</td>
+                    <td>4800원</td>
+                    <td><a href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004786"><img src="./starbuckimg/1.jpg" alt="아메리카노" width="200"></a></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" width="10%">주스류</td>
+                    <td>자바칩 프라푸치노</td>
+                    <td rowspan="2">5000원</td>
+                    <td><a href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004786"><img src="./starbuckimg/1.jpg" alt="아메리카노" width="200"></a></td>
+                </tr>
+                <tr>
+                    <td>녹차 프라푸치노</td>
+                    <td><a href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004786"><img src="./starbuckimg/1.jpg" alt="아메리카노" width="200"></a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+    </body>
+</html>
