@@ -36,7 +36,7 @@ a:visited{
 .fruits-2 span:nth-child(2n+1){
    color: blue;
 } */
-
+/* 
 h1:hover{
     color: red;
 }
@@ -53,4 +53,55 @@ input:focus{
 }
 .stripes div:nth-child(2n){
     background-color: yellow;
+} */
+
+
+/* ::before */
+div.before-el::before{
+    content: "앞!";
+}
+
+/* ::after 
+div.after-el::after{
+    content: "HOT";
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+/* 과제 
+.box::before{
+    content: "택시";
+}
+.box::after{
+    content: "빨리";
+}*/
+
+/* input[type=text] {
+    background-color: orange;
+}
+input[name=name] {
+    background-color: blue;
+} */
+
+/* 과제 */
+.input-1 input[disabled]{
+    background-color: red;
+}
+.input-1 input[placeholder="이름"]{
+    background-color: orange;
+}
+.input-1 input[value]{
+    background-color: blue;
+}
+
+.input-2 input[disabled]{
+    background-color: red;
+}
+.input-2 input[placeholder="이름"]{
+    background-color: orange;
+}
+.input-2 input:not(input[placeholder]){
+    background-color: blue;
 }
