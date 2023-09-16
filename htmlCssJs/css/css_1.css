@@ -1,0 +1,32 @@
+* {
+    color: #fff;
+    background-color: gray;
+/* 태그선택자 */
+}
+div {
+    color: aqua;
+}
+/* 클래스 선택자 */
+.orange {
+    color: orange;
+}
+.bg-red{
+    background-color: red;
+}
+
+/* 아이디 선택자 */
+#red {
+    color: red;
+}
+
+
+/* 과제2 */
+span{
+    background-color: red;
+}
+#first{
+    background-color: blue;
+}
+.second{
+    background-color: green;
+}
