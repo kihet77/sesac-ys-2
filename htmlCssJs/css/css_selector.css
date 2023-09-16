@@ -1,0 +1,56 @@
+/* 
+.div-hover:hover{
+    background-color: red;
+}
+.div-active:active{
+    background-color: blue;
+    color: #fff;
+}
+:blur 가 기본상태 CSS없음
+.input-focus:focus{
+    background-color: orange;
+}
+a:visited{
+    color: red;
+}
+
+.fruits span:first-child{
+    color: red;
+}
+.fruits h3:last-child{
+    color: red;
+}
+.fruits span:nth-child(2) {
+    color: red;
+}
+.fruits span:not(.wm){
+    background-color: aqua;
+}
+.fruits *:not(.span){
+    background-color: aqua;
+}
+
+
+
+
+.fruits-2 span:nth-child(2n+1){
+   color: blue;
+} */
+
+h1:hover{
+    color: red;
+}
+a:active{
+    background-color: red;
+}
+input:focus{
+    background-color: orange;
+}
+
+.stripes div:nth-child(2n+1){
+    background-color: blue;
+    color: #fff;
+}
+.stripes div:nth-child(2n){
+    background-color: yellow;
+}

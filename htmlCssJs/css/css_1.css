@@ -1,11 +1,12 @@
-* {
+/* * {
     color: #fff;
     background-color: gray;
+} */
 /* 태그선택자 */
-}
+/* 
 div {
     color: aqua;
-}
+} */
 /* 클래스 선택자 */
 .orange {
     color: orange;
@@ -20,7 +21,7 @@ div {
 }
 
 
-/* 과제2 */
+/* 과제2
 span{
     background-color: red;
 }
@@ -29,4 +30,45 @@ span{
 }
 .second{
     background-color: green;
+} */
+
+
+/* 하위선택자
+div .apple{
+    color: #790c0c;
+} */
+
+/* 자식선택자
+div > .apple{
+    color: #790c0c;
+} */
+
+/* 인접 형제 선택자 - h1 다음 형제 중 ul 하나 선택
+h1 + ul{
+    font-size: 20px;
+} */
+
+/* 일반 형제 선택자 -  h1 다음 형제 중 ul 하나 선택
+h1 ~ ul{
+    font-size: 20px;
+} */
+
+/* 과제3 */
+
+p.lion{
+    background-color: red;
+}
+#tiger{
+    background-color: yellow;
+}
+.zoo ul .lion{
+    background-color: greenyellow;
+    color: sienna;
+    font-weight: 900;
+}
+#tiger + li {
+    background-color: skyblue;
+}
+.lion ~ li {
+    background-color: orange;
 }
