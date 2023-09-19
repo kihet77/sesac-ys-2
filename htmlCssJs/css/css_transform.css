@@ -1,0 +1,30 @@
+.img-skew:active{
+    transform: skew(50deg, 50deg);
+}
+.img-rotate:active{
+    transform: rotateX(20deg)
+}
+.img-scale:active{
+    transform: scale(1.5)
+}
+.img-translate:active{
+    transform: translate(10px, 10px)
+}
+.img-transform:active{
+    transform: perspective(150px) rotateX(20deg);
+    transition: 2s;
+}
+
+
+
+.dog {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color:#fff;
+}
+.dog:hover{
+    width: 300px;
+    height: 300px;
+    transition: 1s 0.5s;
+}
