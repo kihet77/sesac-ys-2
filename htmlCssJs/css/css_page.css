@@ -1,0 +1,24 @@
+img{
+    transform: skewY(20deg);
+}
+div{
+    position: relative;
+}
+.aa{
+    position: absolute;
+    top:100px;
+    left: 40px;
+    z-index: 3;
+}
+.bb{
+    position: absolute;
+    top:80px;
+    left: 150px;
+    z-index: 2;
+}
+.cc{
+    position: absolute;
+    top:70px;
+    left: 260px;
+    z-index: 1;
+}

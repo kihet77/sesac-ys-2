@@ -36,6 +36,8 @@
     display: inline-block;
     margin: 10px;
   }
+
+
   /* TODO: header1 ~ 4까지 완성해주세요! 
       - 편의를 위해 header2 ~ 4는 display: none 처리를 해두었습니다.
       - 해당 header 작업할 때 display: none 코드를 지워서 작업하면 됩니다!
@@ -46,11 +48,14 @@
     justify-content: space-between;
     align-items: center;
   }
-
+  
   /* header2 */
   .header2 .menus {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
   }
   
   /* header3 */
@@ -65,16 +70,19 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    
   }
   .menu-left{
     display: flex;
     align-items: center;
-    position: absolute;
-    top:0;
-    left: 0;
+
+    
   }
   .menu-right{
-    position: absolute;
-    top:0;
-    right: 0;
+    display: flex;
+    align-items: center;
   }
+
+
+
+
