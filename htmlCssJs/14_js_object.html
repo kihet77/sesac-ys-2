@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 5;
+        let num2 = num;
+        num2 += 5;
+        console.log(num, num2);
+
+
+
+        let arr = [1,2,3,4,5];
+        let arr2 = arr;
+        arr2.reverse()
+        console.log(arr, arr2)
+
+        let date = new Date()
+        console.log(date.getFullYear())
+        console.log(date.getMonth()+1)
+        
+
+        let expired = new Date("2023-09-30").getTime();
+        let today = new Date().getTime();
+
+        if (expired < today){
+            console.log("만료일이 지났어요.")
+        }else{
+            console.log("사용가능해요.")
+        }
+    </script>
+</body>
+</html>
