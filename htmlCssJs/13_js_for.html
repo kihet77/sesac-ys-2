@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 반복문</title>
+</head>
+<body>
+    <script>
+        
+        // let fruits = ["apple", "banana", "grape"];
+        // for(let i=0; i<fruits.length; i++){
+        //     console.log(fruits[i])
+        // }
+
+        // //for(let 변수선언 of 지정했던 변수)
+        // for(let fruit of fruits){
+        //     console.log(fruit);
+        // }
+
+        // fruits.forEach((fruit, index, array)=>{
+        //     console.log(fruit);
+        //     console.log(index);
+        //     console.log(array);
+        // })
+
+
+        // fruits.forEach(function(){
+
+        // })
+
+        let number=[]
+        for(let i=1; i<=100; i++){
+            number.push(i)
+        }
+
+        let forr = 0;
+        for (let i = 0; i<number.length; i++){
+            console.log(number[i]);
+            forr = forr + number[i];
+        }
+        console.log(forr)
+
+
+        let forof=0
+        for(let off of number){
+            forof = forof + off;
+        }
+        console.log(forof)
+
+        let echfor=0
+        number.forEach((ech)=>{
+            echfor = echfor+ech
+        })
+        console.log(echfor)
+    </script>
+</body>
+</html>
