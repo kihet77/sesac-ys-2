@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document 객체</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form>
+        <h1>계산기</h1>
+        <div>
+            <span>값1:</span><input type="text" id="aaa" name="값1" />
+            <br />
+            <span>값2:</span><input type="text" id="bbb" name="값2" />
+            <br />
+            <span>연산자:</span><input type="text" id="sum" name="연산자" />
+            <br />
+            <span>결과:</span><input type="text" id="an" name="결과" readonly/>
+            <br />
+        </div>
+        <div>
+            <br />
+            <button type="button" onclick="item()">계산하기</button>
+            <input type="reset" value="초기화">
+        </div>
+    </form>
+
+    <script>
+        function item(){
+            let aa = Number( document.getElementById("aaa").value);
+            let bb = Number(document.getElementById("bbb").value);
+            let summ = document.getElementById("sum").value;
+
+            let result = 0
+        
+                if( summ == '+' ){
+                    result = aa+bb
+                }else if( summ == '-' ){
+                    result = aa-bb
+                }else if( summ == '*' ){
+                    result = aa*bb
+                }else if( summ == '/' ){
+                    result = aa/bb
+                }else{
+                alert("답이 안나오는중입니다....")
+                }
+
+                document.getElementById("an").value = result;
+        
+        
+        };
+        
+    </script>
+    
+</body>
+</html>
