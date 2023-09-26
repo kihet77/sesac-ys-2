@@ -5,77 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>document 객체</title>
     <style>
-        .container{
-            width: 600px;
-            height: 400px;
-            background-color: beige;
-            display: flex;
-            flex-wrap: wrap;
-        }
 
-        .box{
-            width: 100px;
-            height: 100px;
-        }
-        .red{
-            background-color: red;
-        }
-        .orange{
-            background-color: orange;
-        }
-        .yellow{
-            background-color: yellow;
-        }
     </style>
 </head>
 <body>
+    <h3>방명록입니다.</h3>
+    <div>작성자: <input type="text" name="people" /></div>
+    <div>내용: <input type="text" name="content"/></div>
+    <br />
+    <button type="name">작성</button>
 
+    <table border="1" width="500px">
+        <thead>
+            <tr>
+                <td>번호</td>
+                <td>작성자</td>
+                <td>내용</td>
+                <td>작성일</td>
+            </tr>
+        </thead>
+        <tbody>
 
-    <form>
-        <h1>계산기</h1>
-        <div>
-            <span>값1:</span><input type="text" id="aaa" name="값1" />
-            <br />
-            <span>값2:</span><input type="text" id="bbb" name="값2" />
-            <br />
-            <span>연산자:</span><input type="text" id="sum" name="연산자" />
-            <br />
-            <span>결과:</span><input type="text" id="an" name="결과" readonly/>
-            <br />
-        </div>
-        <div>
-            <br />
-            <button type="button" onclick="item()">계산하기</button>
-            <input type="reset" value="초기화">
-        </div>
-    </form>
+        </tbody>
+    </table>
 
     <script>
-        function item(){
-            let aa = Number( document.getElementById("aaa").value);
-            let bb = Number(document.getElementById("bbb").value);
-            let summ = document.getElementById("sum").value;
+        let num = 1
+        function book(){
+            const people = document.querySelector("[name=people]").value;
+            const cont = document.querySelector("[name=content]").value;
+            const date = new Date()
 
-            let result = 0
-        
-                if( summ == '+' ){
-                    result = aa+bb
-                }else if( summ == '-' ){
-                    result = aa-bb
-                }else if( summ == '*' ){
-                    result = aa*bb
-                }else if( summ == '/' ){
-                    result = aa/bb
-                }else{
-                alert("답이 안나오는중입니다....")
-                }
-
-                document.getElementById("an").value = result;
-        
-        
-        };
-        
+            const tr = document.createElement("td");
+        }
     </script>
-    
 </body>
 </html>
