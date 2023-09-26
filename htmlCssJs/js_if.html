@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let age=0;
+        if(age >= 20){
+            console.log("성인")
+        }else if(age >= 17){
+            console.log("고등학생")
+        }else if(age >= 14){
+            console.log("중학생")
+        }else if(age >= 8){
+            console.log("초등학생")
+        }else{
+            console.log("유아")
+        }
+
+        let number=3
+        switch(number) {
+            case 1:
+                console.log("1");
+                break;
+            case 2:
+                console.log("2");
+                break;
+            case 3:
+                console.log("3");
+                break;
+            default:
+                console.log("모르겠어요");
+                break;
+        }
+
+
+
+        let name="kit"
+        name=="kit" ? console.log("안녕하세요") : console.log("누구세요?")
+
+        let now = new Date().getHours();
+        now==0? console.log("오전") : console.log("오후")
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: movetoright 2s linear 1s infinite alternate;
+    /* keyframes의 이름 지정해주고, 2초동안, 꾸준하게, 1초후 움직임, 반복 갯수 */
+    
+}
+
+
+@keyframes movetoright {
+    from{
+        left:0px;
+    }
+    to{
+        left: 100px;
+    }
+}
+
+.cir {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+    animation: move 3s linear 1s 6;  
+    margin-bottom: 100px;  
+}
+@keyframes move {
+    0%{
+        left:0px;
+        top: 0px;
+    }
+    25%{
+        left: 100px;
+        top: 0px;
+    }
+    50%{
+        left:100px;
+        top: 100px;
+    }
+    75%{
+        left: 0px;
+        top: 100px;
+    }
+    100%{
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.slide{
+    animation: slide 3s linear;
+}
+@keyframes slide{
+    from{
+        margin-left: 100%;
+        width: 20%;
+    }
+    to{
+        width:100%;
+        margin-left: 0%;
+    }
+}
