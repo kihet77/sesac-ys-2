@@ -1,0 +1,28 @@
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+    display: flex;
+}
+.box{
+    width: 100px;
+    height: 100px;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+
+@media screen and (max-width:500px) {
+    .container{
+        width: 500px;
+        height: 500px;
+        background-color: beige;
+        display: block;
+    }
+}

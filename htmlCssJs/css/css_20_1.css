@@ -1,0 +1,83 @@
+      :root {
+        --nav-height-lg: 100px;
+        --nav-height-sm: 60px;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      /* HEADER */
+      header {
+        width: 100%;
+        height: var(--nav-height-lg);
+        z-index: 100;
+        position: fixed;
+        background-color: lightblue;
+      }
+
+      /* 768px 보다 클때의 header */
+      header .inner {
+
+        height: 100%;
+      }
+
+      /* LOGO */
+      header .inner .logo {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 25%;
+        left: 100px;
+      }
+
+      
+      header .inner .menu {
+        display: flex;
+        justify-content: center;
+        height: var(--nav-height-lg);
+      }
+
+      header .inner .menu li {
+        display: inline;
+        padding: 20px;
+        font-weight: bold;
+        margin: auto 0;
+      }
+
+      /* 미디어 쿼리 작성 768px 이하일 때  */
+      @media screen and (max-width:768px) {
+        header {
+            height: var(--nav-height-sm);
+          }
+        header .inner .logo {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+        left: 47%; 
+        }
+        header .inner .menu {
+        display: none;
+        justify-content: center;
+        margin-top: var(--nav-height-sm);
+        }
+
+
+        header .inner .menu li {
+        background-color: azure;
+        display: block;
+        padding: 10px;
+        font-weight: normal;
+        margin: auto;
+        text-align: center;
+        }
+    
+
+      }
