@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 바꾸기</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" ></div>
+
+    <script>
+        const box = document.getElementById("box")
+        function colorChange(){
+            const colors = ["red", "orange", "yellow"]
+            // for(i=0; i<colors.length; i++){
+            //     console.log(box.style.backgroundColor = [colors[i]])
+            // }
+            // colors.forEach(function(color){
+            //     for(i=0; i<colors.length; i++){
+            //         console.log(box.style.backgroundColor = color)
+            // }
+            
+        }
+
+
+        box.addEventListener("click", colorChange)
+
+         
+    </script>
+</body>
+</html>
+<div class=""></div>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($(".conatiner"))
+        })
+    </script>
+    <style>
+        .container{
+            background-color: cadetblue;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    
+
+    <div class="mouseover">mouseover</div>
+
+
+    <form action="">
+        <input type="text" name="text" />
+        <br />
+        <input type="password" name="pw"/>
+    </form>
+
+
+    <script>
+        // $(".container").click(function(){
+        //     console.log(this)
+        //     $(".container").css("background-color", "blue")
+        // })
+
+
+        // $(document).scroll(function() {
+        //     // 스크롤이 바닥을 도달했을 때
+        //     // $(document).height() : document의 높이를 구함.
+        //     // 현재 스크롤 위치 : $(window).scrollTop()
+        //     if ( $(document).height() - $(window).height() == $(window).scrollTop() ) {
+        //         console.log("hello");
+        //     }
+        //     console.log(document.body.scrollHeight)
+            
+        // })
+
+        // $("input[name=pw]").keyup(function(event){
+        //     console.log("key:",event.key)
+        //     if(event.key == "Enter") console.log("value:",this.value);
+        // })
+
+        // $("input[name=text]").keyup(function(event){
+        //     console.log(event.key)
+        //     if(event.key == "Enter"){
+        //         console.log(this.value)
+        //     }
+        // })
+
+        // $(".mouseover").mouseover(function(){
+        //     console.log("hi")
+        //     $(".mouseover").css("color", "blue")
+        //     document.querySelector(".mouseover").innerText = "done"
+        // })
+
+
+        const conatiner = document.getElementsByClassName("container")
+        conatiner[0].addEventListener("click",function(){
+            this.style.backgroundColor = "red"
+
+        })
+
+    </script>
+</body>
+</html>

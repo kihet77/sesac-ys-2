@@ -29,26 +29,26 @@
     </style>
 </head>
 <body>
+    <input type="text" name="name" id="input" value="lily"/>
+    <button type="button" onclick="useVal()">val() 사용하기</button>
+    <button type="button" onclick="useAttr()">attr() 사용하기</button>
+    
+    <br />
+    
+    <span id="span1">hello</span>
+    <button type="button" onclick="useCss()">css() 사용하기</button>
+    <button type="button" onclick="useText()">text() 사용하기</button>
+
     <div class="container">
         <div class="box red" id="red"></div>
         <div class="box orange"></div>
         <div class="box yellow"></div>
     </div>
-    <button type="button" onclick="useAppend()">useAppend() 사용하기</button>
+    <button type="button" onclick="useAppend()">append() 사용하기</button>
+    <button type="button" onclick="useRemove()">remove() 사용하기</button>
     <button type="button" onclick="useParent()">요소 탐색하기</button>
     <button type="button" onclick="controlClass()">클래스 조작하기</button>
-
-
-
-    <input type="text" name="name" id="input" value="kit"/>
-    <button type="button" onclick="useVal()">val() 사용하기</button>
-    <button type="button" onclick="useAttr()">useAttr() 사용하기</button>
     
-    <hr />
-    
-    <span id="span1">hello</span>
-    <button type="button" onclick="useCss()">CSS() 사용하기</button>
-    <button type="button" onclick="useText()">useText() 사용하기</button>
     <script>
         // $("선택자").동작함수();
         // document.get~~~ / document.querySelector~~~
@@ -66,69 +66,81 @@
             // document.getElementById("input").value = '설정하고 싶은 값';
         }
         
-        function useCss(){
-            // 제이쿼리
-            $("#span1").css("font-size", "30px")
-            $("#span1").css("color", "blue")
+        function useCss() {
+            // .css() : style을 변경
+            const span = $("#span1")
+            span.css("font-size", "30px");
+            span.css("color", "blue");
+            // $("#span1").css("color", "blue");
 
-            //자바스크립트
-            const span = document.getElementById("span1");
-            span.style = "font-size: 30px; color:blue"
+            // js 코드로 한다면?
+            // const span = document.getElementById("span1");
+            // span.style = "font-size: 30px; color: blue;" 
+        }
 
-       }
+        function useAttr() {
+            $("#input").val("");
+            $("#input").attr("placeholder", "이름을 입력하세요.");
+            // js : setAttributes()
+        }
 
-       function useAttr() {
-        $("input").val("")
-        $("#input").attr("placeholder","이름을 입력하세요.")
-        
-       // .setAttributes()
-       }
+        function useText() {
+            // innerText
+            // $("#span1").text("hellooooooo");
 
-       function useText(){
-        $("#span1").text("hellooooooooo")
-        //.innerText
+            // innerHTML
+            $("#span1").html("hello <b>lily</b>");
+        }
 
-        $("#span1").html("hello<b>kiseon</b>")
-        //.innerHtml
+        // 자주쓰임!!!!
+        function useAppend() {
+            // const container2 = document.querySelector(".container");
+            // const newBox = document.createElement("div");
+            // newBox.className = "box red";
+            // container2.append(newBox);
 
-       }
-   
-       function useAppend(){
-        // container에 마지막 자식으로 추가
-            $(".container").append(`<div class="box red"</div>`)
+            // .container의 마지막 자식으로 추가
+            $(".container").append(`<div class="box red"></div>`);
 
-        //container에 첫번째 자식으로 추가
-            $(".container").prepend(`<div class="box red"</div>`)
+            // .container의 첫번째 자식으로 추가
+            $(".container").prepend(`<div class="box red"></div>`);
 
-        //container에 앞형제 추가
-            $(".container").before(`<div class="box red"</div>`)
+            // .container의 앞 형제로 추가
+            $(".container").before(`<div class="box red"></div>`);
 
-        //container에 뒤형제 추가
-            $(".container").after(`<div class="box red"</div>`)
-       }
-       
-       function useRemove(){
-        $(".box.orange").remove();
-       }
+            // .container의 뒤 형제로 추가
+            $(".container").after(`<div class="box red"></div>`);
+        }
 
-       function useParent(){
-        //parent()
-        console.log("parent", $(".box.red").parent())
-        //parents()
-        console.log("parents()", $(".box.red").parents())
-        //next()
-        console.log("next()", $(".box.red")next())
-        //prev()
-        console.log("prev()", $(".box.orange").prev())
-        //children()
-        console.log("children()", $(".container").children())
-       }
+        function useRemove() {
+            $(".box.orange").remove(); // 자주쓰임!!!!
 
-       function controlClass(){
-        $(".box.red").addClass("red")
-        $(".box.red").removeClass("")
-       }
+            // const container = document.querySelector(".container");
+            // container.innerHTML = "";
+            // .container의 내용을 비우겠다.
+            $(".container").empty();
+        }
 
-   </script>
+        function useParent() {
+            // parent()
+            console.log("parent", $(".box.red").parent())
+            // parents()
+            console.log("parents", $(".box.red").parents())
+            // next()
+            console.log("next", $(".box.red").next())
+            // prev()
+            console.log("prev", $(".box.orange").prev())
+            // children()
+            console.log("children", $(".container").children())
+        }
+
+        // 자주쓰임!!!!
+        function controlClass() {
+            const redBox = $("#red")
+            // if(redBox.hasClass("red")) redBox.removeClass("red");
+            // else redBox.addClass("red");
+            redBox.toggleClass("red");
+        }
+    </script>
 </body>
 </html>
