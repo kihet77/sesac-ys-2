@@ -13,13 +13,18 @@
         table{
             width: 100%;
         }
-        tr>td:first-child{
+        tr>td:first-child,
+        tr>th:first-child{
             color: red;
         }
-        tr>td:last-child{
+        tr>td:last-child,
+        tr>th:last-child{
             color: blue;
         }
         td{
+            width: calc(100%/7);
+            height: 80px;
+            vertical-align: top;
             text-align: center;
             padding: 10px;
         }

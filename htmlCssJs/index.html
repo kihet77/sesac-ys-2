@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>사이트 만들어보기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/01_proj.css">
+
+</head>
+  <body>
+    <!-- header -->
+    <header>
+        <form id="user-id" action="" class="row g-3">
+                <div class="col-auto">
+                  <label for="inputPassword2" class="visually-hidden">Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Code">
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        제출하기
+                    </button>
+                </div>
+        </form>
+        <!-- modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">제출할 수 없습니다.</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    제출이 불가능하기 때문에 제출이 안됩니다.
+                </div>
+
+              </div>
+            </div>
+          </div>
+        <!-- side bar/Offcanvas -->
+        <button id="liveToastBtn" class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                <i class="fa-solid fa-face-flushed"></i>
+                <span>Hello World:)</span>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6>Hi User.</h6>
+            <ul class="menu">
+                <li>Home</li>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+            </ul>
+        </div>
+        <span></span>
+        </div>
+    </header> 
+    <main>
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-5">
+                <section class="shadow">
+                    <canvas id="Bar" width="100%"></canvas>
+                  </section>
+                <section>
+                    <canvas id="Doughnut" width="100%"></canvas>
+                </section>
+                <section class="shadow">
+                    <canvas id="Line" width="100%"></canvas>
+                </section>
+              </div>
+              <div class="col-7">
+                <section>
+                    <div class="bell bell-1 shadow">
+                        <i class="fa-solid fa-bell"></i>
+                        <p>공지01</p>
+                    </div>
+                    <div class="bell bell-2 shadow" >
+                        <i class="fa-solid fa-bell   position-relative">
+                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </i>
+                        <p>공지가 길어지고 있습니다.</p>
+
+                    </div>
+                </section>
+                <section>
+                    <canvas id="Radar" width="100%"></canvas>
+                </section>
+              </div>
+             
+            </div>
+          </div>
+    </main>
+
+    <a href="https://cue.search.naver.com/?from=da_pcmainsub" target="_blank"><img src="https://s.pstatic.net/static/www/mobile/edit/20231006_1095/upload_1696561744358CZxYt.png" alt="naver"></a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    <script>
+    const Bar = document.getElementById('Bar');
+    const Doughnut = document.getElementById('Doughnut');
+    
+    new Chart(Bar, {
+        type: 'bar',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3,],
+            borderWidth: 0
+        }]
+        },
+        options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
+    new Chart(Doughnut, {
+        type: 'doughnut',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
+    new Chart(Line, {
+        type: 'line',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
+        new Chart(Radar, {
+        type: 'radar',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+        }]
+        },
+        options: {
+
+        }
+    });
+    </script>
+
+
+
+
+
+
+</body>
+</html>
