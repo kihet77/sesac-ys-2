@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejs에서 js써보기</title>
+</head>
+<body>
+    <%=name %>
+
+    <% for(let i=0; i<product.length ; i++) { %>
+        <div>상품 <%=product[i] %></div>
+    <% } %>
+
+
+    <%="Hi kisoen" %>
+    <%="<div>안녕?</div>" %>
+    <%-"<div>안녕?</div>" %>
+
+    <%-include("index.ejs") %>
+</body>
+</html>
