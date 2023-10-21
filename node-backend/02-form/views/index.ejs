@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로그인</h1>
+    <form action="/get" method="get">
+        <input type="text" name="id" />
+        <input type="password" name="pw" />
+        <input type="radio" name="jender" value="남자" id="men" /> <label for="men">남자</label>
+        <input type="radio" name="jender" value="여자" id="women" /> <label for="women">여자</label>
+        <button type="submit">제출</button>
+    </form>
+
+    <h1>회원가입</h1>
+    <form action="/post/ver2" method="post">
+        <input type="text" name="id" />
+        <input type="password" name="pw" />
+        <input type="text" name="name" />
+        <input type="text" name="email" />
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>
