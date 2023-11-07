@@ -3,3 +3,5 @@
 
 -git branch test1
 -git branch test2
+
+-git branch conflictTest2
