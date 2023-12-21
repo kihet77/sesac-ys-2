@@ -1,0 +1,20 @@
+.FuncComponent__test-css--active {}
+
+.test-css {
+  background-color: yellow;
+  font-size: 30px;
+}
+form {
+  text-align: center;
+}
+
+.form__title {
+  height: 40px;
+  font-size: 30px;
+  background-color: blanchedalmond;
+  color: brown;
+}
+
+.form__input {
+  margin-top: 16px;
+}

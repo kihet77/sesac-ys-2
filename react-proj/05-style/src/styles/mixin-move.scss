@@ -1,0 +1,54 @@
+$color-pink : pink;
+$color-yellow : yellow;
+$color-green : green;
+
+@mixin box {
+  position:relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@mixin move($id, $index) {
+  @keyframes move#{$id} {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+
+    25% {
+      left: $index;
+      top: 0;
+    }
+
+    75% {
+      left:  $index;
+      top: $index;
+    }
+
+    100% {
+      left: 0px;
+      top: $index;
+    }
+  }
+}
+
+
+.pink {
+  @include box;
+  @include move(1, 30px);
+  animation: move1 2s ease-in Infinite;
+  background-color: $color-pink;
+}
+.yellow {
+  @include box;
+  @include move(2, 60px);
+  animation: move2 2s ease-in Infinite;
+  background-color: $color-yellow;
+}
+.green {
+  @include box;
+  @include move(3, 90px);
+  animation: move3 2s ease-in Infinite;
+  background-color: $color-green;
+}

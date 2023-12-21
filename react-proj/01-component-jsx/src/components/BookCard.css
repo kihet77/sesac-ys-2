@@ -1,0 +1,26 @@
+.BookCard {
+  width: 300px;
+  background-color: bisque;
+  text-align: center;
+  padding: 32px;
+}
+img {
+  width: 60px;
+}
+.BookCard__best{
+  font-size: 28px;
+  font-weight: 700;
+  color: brown;
+}
+
+.BookCard__content{
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0px;
+}
+.BookCard__title{
+
+  font-size: 24px;
+  font-weight: 700;
+}

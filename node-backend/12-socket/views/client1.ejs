@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>socket</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  <h3> 소켓 연습 </h3>
+  <button onclick="hello()"> Hello </button>
+  <button onclick="entry()">ENTRY</button>
+  <hr />
+  <h2 id="text">Hello Wolrd!</h2>
+  <button onclick="HELLO()">HELLO</button>
+  <button onclick="STUDY()">STUDY</button>
+  <button onclick="BYE()">BYE</button>
+
+
+
+  <script>
+    const socket = io()
+
+    //수업
+    function hello() {
+      socket.emit("Hello", {
+        msg: "안녕하세요~~"
+      })
+    }
+    socket.on("bye", (res) => {
+      console.log(res)
+    })
+    function entry() {
+      socket.emit("entry")
+    }
+    socket.on("notice", (res) => {
+      console.log(res)
+    })
+
+
+    //실습
+    const text = document.getElementById("text")
+
+    function HELLO() {
+      socket.emit("HELLO", {
+        msg: "HELLO"
+      })
+    }
+    socket.on("HI", (res) => {
+      text.innerText = `${res.msg}`
+    })
+
+    function STUDY() {
+      socket.emit("STUDY", {
+        msg: "STUDY"
+      })
+    }
+    socket.on("EASY", (res) => {
+      text.innerText = `${res.msg}`
+    })
+
+    function BYE() {
+      socket.emit("BYE", {
+        msg: "BYE"
+      })
+    }
+    socket.on("GOODBYE", (res) => {
+      text.innerText = `${res.msg}`
+    })
+
+  </script>
+</body>
+
+</html>
