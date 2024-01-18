@@ -1,6 +1,6 @@
 import './App.css';
 import Practice1 from "./components/Practice1"
-import Chatting from "./components/Chatting3"
+import Chatting from "./components/Chatting2"
 
 function App() {
   return (
