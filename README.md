@@ -1,12 +1,2 @@
-# sesac-ys-2
-새싹 용산캠 2기 수업
-
--git branch test1
--git branch test2
-
-
--git branch conflictTest1
-
--git branch conflictTest2
-
--pr test
+# 청년취업사관학교 새싹
+웹풀스택 용산 2기 수업 & 실습
